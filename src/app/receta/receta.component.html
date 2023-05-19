@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-auto">
+    <div class="card" style="width: 18rem;">
+      <caption>
+        <p class="mb-0 text-dark">
+          Total Opiniones: {{ getTotalOpiniones() }}
+        </p>
+        <p class="mb-0 text-dark">
+          Promedio de calificaciones: {{ getCalificacionPromedio() }}
+        </p>
+      </caption>
+      <thead class="card-dark">
+        <tr>
+          <th scope="col">Calificacion</th>
+          <th scope="col">Duracion</th>
+          <th scope="col">Dificultad</th>
+          <th scope="col">Autor</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let receta of recetas">
+          <th>
+            {{ receta.id.toString() }}
+          </th>
+          <td>
+            {{ receta.estrellas}}
+          </td>
+          <td>
+            {{ receta.duracion }}
+          </td>
+          <td>
+            {{ receta.dificultad }}
+          </td>
+          <td>
+            {{ receta.autorReceta }}
+          </td>
+        </tr>
+      </tbody>
+    </div>
+  </div>
+  
